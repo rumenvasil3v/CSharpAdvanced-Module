@@ -4,7 +4,46 @@
     {
         static void Main(string[] args)
         {
-            
+            // INPUT
+            int[] arrayOfIntegers = Console
+                .ReadLine()
+                .Split()
+                .Select(int.Parse)
+                .ToArray();
+
+            // INITIALIZING QUEUE
+            Queue<int> queue = new Queue<int>(arrayOfIntegers);
+
+            // CODE LOGIC
+            for (int n = 0; n < arrayOfIntegers.Length; n++)
+            {
+
+                // DEQUEUE IF NUMBER IS ODD
+                if (arrayOfIntegers[n] % 2 == 1)
+                {
+                    queue.Dequeue();
+                }
+                else
+                {
+                    // DEQUEUE AND ENQUEUE IF NUMBER IF EVEN BECAUSE WE WANT TO REMOVE ONLY ODD NUMBERS
+                    queue.Dequeue();
+                    queue.Enqueue(arrayOfIntegers[n]);
+                }
+            }
+
+            // OUTPUT
+            while (queue.Count > 0)
+            {
+
+                if (queue.Count == 1)
+                {
+                    // BREAK BECAUSE WHEN WE DEQUEUE OUR COUNT IS ZERO
+                    Console.WriteLine(queue.Dequeue());
+                    break;
+                }
+
+                Console.Write($"{queue.Dequeue()}, ");
+            }
         }
     }
 }
