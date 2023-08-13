@@ -23,7 +23,7 @@
                 switch (command)
                 {
                     case "green":
-                       totalPassedCars = CountOfCarsPassing(queue, numberOfCarsPerGreenLight, totalPassedCars);
+                        totalPassedCars = CountOfCarsPassing(queue, numberOfCarsPerGreenLight, totalPassedCars);
                         break;
                     default:
                         queue.Enqueue(command);
