@@ -11,7 +11,7 @@
                 .Select(int.Parse)
                 .ToArray();
 
-           Queue<int> queue = DequeueOddNumbers(arrayOfIntegers);
+            Queue<int> queue = DequeueOddNumbers(arrayOfIntegers);
 
             PrintAllEvenNumbers(queue);
         }
