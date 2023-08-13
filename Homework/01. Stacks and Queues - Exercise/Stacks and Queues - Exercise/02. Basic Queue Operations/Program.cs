@@ -10,10 +10,13 @@
             // INPUT /array of integers/
             int[] arrayOfIntegers = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
+            // Enqueue elements into queue
             Queue<int> queue = EnqueueElementsIntoQueue(queueArguments[0], arrayOfIntegers);
 
+            // Dequeue elements from the queue
             DequeueElementsFromQueue(queue, queueArguments[1]);
 
+            // Print final condition of the queue
             PrintFinalConditionOfTheQueue(queue, queueArguments[2]);
         }
 
@@ -39,11 +42,11 @@
 
         static void PrintFinalConditionOfTheQueue(Queue<int> queue, int number)
         {
-            if (queue.Contains(number))
+            if (queue.Contains(number)) // check if queue contains number
             {
                 Console.WriteLine("true");
             }
-            else if (!queue.Contains(number) && queue.Count > 0)
+            else if (!queue.Contains(number) && queue.Count > 0) // check if queue does not contain this number and whether count is > 0
             {
                 int smallestNumber = queue.Min(x => x);
 
@@ -51,7 +54,7 @@
             }
             else
             {
-                Console.WriteLine(0);
+                Console.WriteLine(0); // print 0 if queue count equals zero
             }
         }
     }
