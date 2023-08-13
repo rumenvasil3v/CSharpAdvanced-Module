@@ -16,6 +16,7 @@
             // INITIALIZING SIGN
             char sign = '\0';
 
+            // CODE LOGIC
             while (stack.Count > 0)
             {
                 // POP NUMBER AND SET IT TO VARIABLE
