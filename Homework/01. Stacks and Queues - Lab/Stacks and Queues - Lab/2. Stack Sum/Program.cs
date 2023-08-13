@@ -4,18 +4,18 @@
     {
         static void Main(string[] args)
         {
+            //INPUT
+
             List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-            Stack<int> stack = new Stack<int>();
+            // PUSHING ELEMENTS IN STACK FROM THE LIST
+            Stack<int> stack = new Stack<int>(numbers);
 
-            foreach (int number in numbers)
-            {
-                stack.Push(number);
-            }
-
+            // CODE LOGIC
             string command;
             while ((command = Console.ReadLine().ToUpper()) != "END")
             {
+                // SPLITTING COMMAND INTO ARGUMENTS
                 string[] arguments = command.Split();
 
                 switch (arguments[0].ToString())
@@ -24,12 +24,14 @@
                         int firstNumber = int.Parse(arguments[1]);
                         int secondNumber = int.Parse(arguments[2]);
 
+                        // PUSHING ELEMENTS IN STACK
                         stack.Push(firstNumber);
                         stack.Push(secondNumber);
                         break;
                     case "REMOVE":
                         int countOfNumbersToRemove = int.Parse(arguments[1]);
 
+                        // POP Nth COUNT ELEMENTS
                         if (countOfNumbersToRemove <= stack.Count)
                         {
                             while (countOfNumbersToRemove > 0)
@@ -42,12 +44,20 @@
                 }
             }
 
+            // OUTPUT
             PrintSumOfTheElementsInTheStack(stack);
         }
 
         static void PrintSumOfTheElementsInTheStack(Stack<int> stack)
         {
-            Console.WriteLine($"Sum: {stack.Sum()}");
+            // PRINT SUM OF THE REMAINING ELEMENTS
+            int sum = 0;
+            while (stack.Count > 0)
+            {
+                sum += stack.Pop();
+            }
+
+            Console.WriteLine(sum);
         }
     }
 }
