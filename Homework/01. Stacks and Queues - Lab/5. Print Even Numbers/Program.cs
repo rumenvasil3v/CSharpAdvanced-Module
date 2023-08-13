@@ -11,6 +11,13 @@
                 .Select(int.Parse)
                 .ToArray();
 
+           Queue<int> queue = DequeueOddNumbers(arrayOfIntegers);
+
+            PrintAllEvenNumbers(queue);
+        }
+
+        static Queue<int> DequeueOddNumbers(int[] arrayOfIntegers)
+        {
             // INITIALIZING QUEUE
             Queue<int> queue = new Queue<int>(arrayOfIntegers);
 
@@ -31,6 +38,11 @@
                 }
             }
 
+            return queue;
+        }
+
+        static void PrintAllEvenNumbers(Queue<int> queue)
+        {
             // OUTPUT
             while (queue.Count > 0)
             {
