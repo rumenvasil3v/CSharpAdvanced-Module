@@ -23,13 +23,15 @@
         {
             for (int n = 0; n < arrayOfIntegers.Length; n++)
             {
-                if (quantityOfFood - arrayOfIntegers[n] >= 0) // check if we have enough food to execute the order
+                // check if we have enough food to execute the order
+                if (quantityOfFood - arrayOfIntegers[n] >= 0)
                 {
                     quantityOfFood -= arrayOfIntegers[n];
                     queue.Dequeue();
                 }
                 else
                 {
+
                     break; // if we don't have food, break and print remaining orders
                 }
             }
