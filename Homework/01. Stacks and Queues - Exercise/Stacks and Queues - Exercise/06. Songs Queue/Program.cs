@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
+            // INPUT
             string[] sequenceOfSongs = Console.ReadLine().Split(", ");
 
             Queue<string> songsQueue = new Queue<string>(sequenceOfSongs);
 
+            // INVOKE METHOD
             ManipulatingSongs(songsQueue);
         }
 
@@ -19,35 +21,29 @@
 
                 switch (command[0])
                 {
+                    // ENQUEUE SONG
                     case "Add":
-                        string currentSong = string.Empty;
-                        for (int n = 1; n < command.Length; n++)
-                        {
-                            if (n == command.Length - 1)
-                            {
-                                currentSong += command[n];
-                                break;
-                            }
-                            currentSong += command[n] + " ";
-                        }
+                        string currentSong = NameOfSong(command); 
 
                         if (CheckIfSongIsAlreadyEnqueued(songsQueue, currentSong))
                         {
-                            Console.WriteLine("{0} song is already contained!", currentSong);
+                            // in case if there is already enqueued that song
+                            Console.WriteLine("{0} is already contained!", currentSong);
                             continue;
                         }
 
                         EnqueueSong(songsQueue, currentSong);
                         break;
-                    case "Play":
+                    case "Play": // DEQUEUE SONG
                         DequeueSong(songsQueue);
                         break;
                     case "Show":
-                        PrintAllSongs(songsQueue);
+                        PrintAllSongs(songsQueue); // PRINT CURRENT ENQUEUED SONGS
                         break;
                 }
             }
 
+            // OUTPUT
             Console.WriteLine("No more songs!");
         }
 
@@ -74,6 +70,22 @@
             }
 
             return false;
+        }
+
+        static string NameOfSong(string[] command)
+        {
+            string currentSong = string.Empty;
+            for (int n = 1; n < command.Length; n++)
+            {
+                if (n == command.Length - 1)
+                {
+                    currentSong += command[n];
+                    break;
+                }
+                currentSong += command[n] + " ";
+            }
+
+            return currentSong;
         }
     }
 }
