@@ -1,7 +1,6 @@
 ﻿/*
 9
 1 HelloThere
-1 TestHere
 3 7
 2 2
 3 5
@@ -43,7 +42,7 @@ namespace _09._Simple_Text_Editor
                     case "2":
                         int countCharactersToRemove = int.Parse(command[1]);
 
-                        string result = string.Empty;
+                        string modifiedString = string.Empty;
 
                         if (stack.Count == 0)
                         {
@@ -54,10 +53,10 @@ namespace _09._Simple_Text_Editor
 
                         for (int t = 0; t < currentText.Length - countCharactersToRemove; t++)
                         {
-                            result += currentText[t];
+                            modifiedString += currentText[t];
                         }
 
-                        stack.Push(result);
+                        stack.Push(modifiedString);
                         break;
                     case "3":
                         int indexToPrint = int.Parse(command[1]);
