@@ -7,10 +7,8 @@
 4
 3 7
 4
-4
-4
+1 TestPassed
 3 5
-2 1
  */
 
 namespace _09._Simple_Text_Editor
