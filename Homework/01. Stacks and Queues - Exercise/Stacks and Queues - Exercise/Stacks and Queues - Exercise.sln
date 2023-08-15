@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Simple Text Editor", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Simple Text Editor - Exercise", "09. Simple Text Editor - Exercise\09. Simple Text Editor - Exercise.csproj", "{5E9ACD68-83E3-496B-9901-5051F3B6C408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Crossroads", "10. Crossroads\10. Crossroads.csproj", "{C983EB0C-65CD-450C-863F-C4D5BF427BE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{5E9ACD68-83E3-496B-9901-5051F3B6C408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9ACD68-83E3-496B-9901-5051F3B6C408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9ACD68-83E3-496B-9901-5051F3B6C408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
