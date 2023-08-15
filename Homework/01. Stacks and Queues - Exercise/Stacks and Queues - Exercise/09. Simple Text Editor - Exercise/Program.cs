@@ -1,7 +1,6 @@
 ﻿/*
 9
 1 HelloThere
-1 TestHere
 3 7
 2 2
 3 5
@@ -20,15 +19,18 @@ namespace _09._Simple_Text_Editor
     {
         static void Main(string[] args)
         {
+            // INPUT
             int numberOfOperations = int.Parse(Console.ReadLine());
 
             Stack<string> stack = new Stack<string>();
 
+            // CODE LOGIC
             ManipulateString(stack, numberOfOperations);
         }
 
         static void ManipulateString(Stack<string> stack, int numberOfOperations)
         {
+            // CODE LOGIC
             for (int n = 0; n < numberOfOperations; n++)
             {
                 string[] command = Console.ReadLine().Split();
@@ -43,7 +45,7 @@ namespace _09._Simple_Text_Editor
                     case "2":
                         int countCharactersToRemove = int.Parse(command[1]);
 
-                        string result = string.Empty;
+                        string modifiedString = string.Empty;
 
                         if (stack.Count == 0)
                         {
@@ -54,10 +56,10 @@ namespace _09._Simple_Text_Editor
 
                         for (int t = 0; t < currentText.Length - countCharactersToRemove; t++)
                         {
-                            result += currentText[t];
+                            modifiedString += currentText[t];
                         }
 
-                        stack.Push(result);
+                        stack.Push(modifiedString);
                         break;
                     case "3":
                         int indexToPrint = int.Parse(command[1]);
@@ -67,6 +69,7 @@ namespace _09._Simple_Text_Editor
                             break;
                         }
 
+                        // OUTPUT
                         Console.WriteLine(stack.Peek()[indexToPrint - 1]);
                         break;
                     case "4":
