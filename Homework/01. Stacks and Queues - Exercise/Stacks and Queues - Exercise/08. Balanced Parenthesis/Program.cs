@@ -4,41 +4,44 @@
     {
         static void Main(string[] args)
         {
-            string sequenceOfParenthesis = Console.ReadLine();
+            // INPUT
+            string sequenceOfParentheses = Console.ReadLine();
 
             Stack<char> stack = new Stack<char>();
 
-            IterateThroughParenthesis(stack, sequenceOfParenthesis);
+            // CODE LOGIC
+            IterateThroughParentheses(stack, sequenceOfParentheses);
         }
 
-        static void IterateThroughParenthesis(Stack<char> stack, string sequenceOfParenthesis)
+        static void IterateThroughParentheses(Stack<char> stack, string sequenceOfParentheses)
         {
+            // CODE LOGIC
             char closingBracket = '\0';
 
             bool isFalse = false;
-            for (int n = 0; n < sequenceOfParenthesis.Length; n++)
+            for (int n = 0; n < sequenceOfParentheses.Length; n++)
             {
-                char currentChar = sequenceOfParenthesis[n];
+                char currentChar = sequenceOfParentheses[n];
 
                 switch (currentChar)
                 {
                     case '(':
-                        stack.Push(sequenceOfParenthesis[n]);
+                        stack.Push(sequenceOfParentheses[n]);
                         break;
                     case '{':
-                        stack.Push(sequenceOfParenthesis[n]);
+                        stack.Push(sequenceOfParentheses[n]);
                         break;
                     case '[':
-                        stack.Push(sequenceOfParenthesis[n]);
+                        stack.Push(sequenceOfParentheses[n]);
                         break;
                     case ']':
-                        if (stack.Count == 0)
+                        if (CheckIfStackCountEqualsZero(stack))
                         {
                             isFalse = true;
                             break;
                         }
-                        
-                        if (stack.Pop() == '[')
+
+                        if (CheckIfBracketsAreSquare(stack))
                         {
                             continue;
                         }
@@ -46,13 +49,13 @@
                         isFalse = true;
                         break;
                     case '}':
-                        if (stack.Count == 0)
+                        if (CheckIfStackCountEqualsZero(stack))
                         {
                             isFalse = true;
                             break;
                         }
-                        
-                        if (stack.Pop() == '{')
+
+                        if (CheckIfBracketsAreCurly(stack))
                         {
                             continue;
                         }
@@ -60,13 +63,13 @@
                         isFalse = true;
                         break;
                     case ')':
-                        if (stack.Count == 0)
+                        if (CheckIfStackCountEqualsZero(stack))
                         {
                             isFalse = true;
                             break;
                         }
-                        
-                        if (stack.Pop() == '(')
+
+                        if (CheckIfBracketsAreParentheses(stack))
                         {
                             continue;
                         }
@@ -81,11 +84,13 @@
                 }
             }
 
-            CheckIfParenthesisAreBalanced(stack, isFalse);
+            // OUTPUT
+            CheckIfParenthesisAreBalancedAndPrint(stack, isFalse);
         }
 
-        static void CheckIfParenthesisAreBalanced(Stack<char> stack, bool isFalse)
+        static void CheckIfParenthesisAreBalancedAndPrint(Stack<char> stack, bool isFalse)
         {
+            // OUTPUT
             if (!isFalse && stack.Count == 0)
             {
                 Console.WriteLine("YES");
@@ -94,6 +99,46 @@
             {
                 Console.WriteLine("NO");
             }
+        }
+
+        static bool CheckIfStackCountEqualsZero(Stack<char> stack)
+        {
+            if (stack.Count == 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        static bool CheckIfBracketsAreParentheses(Stack<char> stack)
+        {
+            if (stack.Pop() == '(')
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        static bool CheckIfBracketsAreSquare(Stack<char> stack)
+        {
+            if (stack.Pop() == '[')
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        static bool CheckIfBracketsAreCurly(Stack<char> stack)
+        {
+            if (stack.Pop() == '{')
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
