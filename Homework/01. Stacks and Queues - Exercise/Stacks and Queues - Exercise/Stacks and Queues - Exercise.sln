@@ -19,15 +19,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Songs Queue", "06. Song
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Truck Tour", "07. Truck Tour\07. Truck Tour.csproj", "{7B81B422-BCEF-4828-9D20-90F1EF8E6D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Balanced Parenthesis", "08. Balanced Parenthesis\08. Balanced Parenthesis.csproj", "{19940438-A556-48C0-8D90-1B7C61C7A856}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Balanced Parenthesis", "08. Balanced Parenthesis\08. Balanced Parenthesis.csproj", "{19940438-A556-48C0-8D90-1B7C61C7A856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Truck Tour - Exercise", "07. Truck Tour - Exercise\07. Truck Tour - Exercise.csproj", "{CEB369AA-796E-4FDF-9CD5-A227E78D51ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Truck Tour - Exercise", "07. Truck Tour - Exercise\07. Truck Tour - Exercise.csproj", "{CEB369AA-796E-4FDF-9CD5-A227E78D51ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Simple Text Editor", "09. Simple Text Editor\09. Simple Text Editor.csproj", "{C0699F24-65C9-435A-A25C-F5C675027241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Simple Text Editor", "09. Simple Text Editor\09. Simple Text Editor.csproj", "{C0699F24-65C9-435A-A25C-F5C675027241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Simple Text Editor - Exercise", "09. Simple Text Editor - Exercise\09. Simple Text Editor - Exercise.csproj", "{5E9ACD68-83E3-496B-9901-5051F3B6C408}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Simple Text Editor - Exercise", "09. Simple Text Editor - Exercise\09. Simple Text Editor - Exercise.csproj", "{5E9ACD68-83E3-496B-9901-5051F3B6C408}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Crossroads", "10. Crossroads\10. Crossroads.csproj", "{C983EB0C-65CD-450C-863F-C4D5BF427BE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. Crossroads", "10. Crossroads\10. Crossroads.csproj", "{C983EB0C-65CD-450C-863F-C4D5BF427BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Crossroads - Exercise", "10. Crossroads - Exercise\10. Crossroads - Exercise.csproj", "{6F0A7AD4-F7D9-4FD6-842E-FCD3D982B229}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C983EB0C-65CD-450C-863F-C4D5BF427BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0A7AD4-F7D9-4FD6-842E-FCD3D982B229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0A7AD4-F7D9-4FD6-842E-FCD3D982B229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0A7AD4-F7D9-4FD6-842E-FCD3D982B229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0A7AD4-F7D9-4FD6-842E-FCD3D982B229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
