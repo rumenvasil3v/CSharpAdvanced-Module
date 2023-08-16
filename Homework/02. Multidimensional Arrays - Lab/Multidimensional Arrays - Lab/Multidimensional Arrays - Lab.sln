@@ -5,6 +5,7 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Sum Matrix Elements", "1. Sum Matrix Elements\1. Sum Matrix Elements.csproj", "{5D06E6BC-491C-4FB0-814C-148332046391}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Sum Matrix Columns", "2. Sum Matrix Columns\2. Sum Matrix Columns.csproj", "{8FD289BC-DD1E-4D6C-98EE-B40FD7110E77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Primary Diagonal", "3. Primary Diagonal\3. Primary Diagonal.csproj", "{BF4CB5C8-EB8D-4FF4-B3FB-FB422466BFD6}"
@@ -17,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Jagged-Array Modificatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Pascal Triangle", "7. Pascal Triangle\7. Pascal Triangle.csproj", "{45633B69-A853-46B8-A416-AF83452DCD49}"
 EndProject
+=======
+>>>>>>> ea77eae09efd15b153c096f90d800a8e13643f07
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +30,7 @@ Global
 		{5D06E6BC-491C-4FB0-814C-148332046391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D06E6BC-491C-4FB0-814C-148332046391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D06E6BC-491C-4FB0-814C-148332046391}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{8FD289BC-DD1E-4D6C-98EE-B40FD7110E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FD289BC-DD1E-4D6C-98EE-B40FD7110E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FD289BC-DD1E-4D6C-98EE-B40FD7110E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +55,8 @@ Global
 		{45633B69-A853-46B8-A416-AF83452DCD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45633B69-A853-46B8-A416-AF83452DCD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45633B69-A853-46B8-A416-AF83452DCD49}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> ea77eae09efd15b153c096f90d800a8e13643f07
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
