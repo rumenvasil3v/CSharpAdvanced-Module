@@ -1,4 +1,8 @@
-﻿namespace _01._Basic_Stack_Operations
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace _01._Basic_Stack_Operations
 {
     internal class Program
     {
