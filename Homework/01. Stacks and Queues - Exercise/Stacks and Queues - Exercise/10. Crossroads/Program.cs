@@ -23,8 +23,8 @@ namespace _10._Crossroads
                 {
                     case "green":
                         bool isThereAccident = CarPassingThroughCrossroad(stack, queue, durationOfGreenLight, freeWindow);
-                       
-                        if (!isThereAccident)
+
+                        if (isThereAccident)
                         {
                             return;
                         }
@@ -40,7 +40,6 @@ namespace _10._Crossroads
 
             Console.WriteLine("Everyone is safe.");
             Console.WriteLine($"{stack.Count} total cars passed the crossroads.");
-
         }
 
         static void EnqueueCarToTraffic(Queue<string> queue, string car)
@@ -50,7 +49,7 @@ namespace _10._Crossroads
 
         static bool CarPassingThroughCrossroad(Stack<string> stack, Queue<string> queue, int durationOfGreenLight, int freeWindow)
         {
-            bool noAccident = false;
+            bool accident = false;
 
             int secondsGreenLight = durationOfGreenLight;
             int secondsFreeWindow = freeWindow;
@@ -65,10 +64,8 @@ namespace _10._Crossroads
                 }
 
                 bool carPassedSuccessfully = false;
-                noAccident = false;
 
                 string currentCar = queue.Dequeue();
-                stack.Push(currentCar);
 
                 Queue<char> carQueue = new Queue<char>(currentCar);
 
@@ -78,6 +75,7 @@ namespace _10._Crossroads
                     carQueue.Dequeue();
                     if (carQueue.Count == 0)
                     {
+                        stack.Push(currentCar);
                         carPassedSuccessfully = true;
                         break;
                     }
@@ -85,7 +83,6 @@ namespace _10._Crossroads
 
                 if (carPassedSuccessfully)
                 {
-                    noAccident = true;
                     continue;
                 }
                 else
@@ -96,6 +93,7 @@ namespace _10._Crossroads
                         secondsFreeWindow--;
                         if (carQueue.Count == 0)
                         {
+                            stack.Push(currentCar);
                             carPassedSuccessfully = true;
                             break;
                         }
@@ -103,18 +101,19 @@ namespace _10._Crossroads
 
                     if (carPassedSuccessfully)
                     {
-                        noAccident = true;
                         continue;
                     }
                     else
                     {
                         Console.WriteLine("A crash happened!");
                         Console.WriteLine($"{currentCar} was hit at {carQueue.Dequeue()}.");
+                        accident = true;
+                        break;
                     }
                 }
             }
 
-            return noAccident;
+            return accident;
         }
     }
 }
