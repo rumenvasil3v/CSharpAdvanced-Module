@@ -6,16 +6,20 @@ namespace _10._Crossroads
     {
         static void Main(string[] args)
         {
+            // INPUT
             int durationOfGreenLight = int.Parse(Console.ReadLine());
             int freeWindow = int.Parse(Console.ReadLine());
 
             Queue<string> queue = new Queue<string>();
             Stack<string> stack = new Stack<string>();
+
+            // CODE LOGIC
             ManipulateTraffic(stack, queue, durationOfGreenLight, freeWindow);
         }
 
         static void ManipulateTraffic(Stack<string> stack, Queue<string> queue, int durationOfGreenLight, int freeWindow)
         {
+            // CODE LOGIC
             string command;
             while ((command = Console.ReadLine()) != "END")
             {
@@ -24,6 +28,7 @@ namespace _10._Crossroads
                     case "green":
                         bool isThereAccident = CarPassingThroughCrossroad(stack, queue, durationOfGreenLight, freeWindow);
 
+                        // POTENTIAL OUTPUT IF CAR CRASHES
                         if (isThereAccident)
                         {
                             return;
@@ -38,17 +43,20 @@ namespace _10._Crossroads
                 }
             }
 
+            // OUTPUT
             Console.WriteLine("Everyone is safe.");
             Console.WriteLine($"{stack.Count} total cars passed the crossroads.");
         }
 
         static void EnqueueCarToTraffic(Queue<string> queue, string car)
         {
+            // ENQUEUE CAR
             queue.Enqueue(car);
         }
 
         static bool CarPassingThroughCrossroad(Stack<string> stack, Queue<string> queue, int durationOfGreenLight, int freeWindow)
         {
+            // CAR PASSING WHEN IS GREEN LIGHT
             bool accident = false;
 
             int secondsGreenLight = durationOfGreenLight;
