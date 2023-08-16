@@ -6,32 +6,35 @@ namespace _11._Key_Revolver___Exercise
     {
         static void Main(string[] args)
         {
+            // INPUT
             int priceForEachBullet = int.Parse(Console.ReadLine());
             int sizeOfGunBarrel = int.Parse(Console.ReadLine());
             int[] bullets = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] locks = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int valueOfIntelligence = int.Parse(Console.ReadLine());
 
-            Queue<int> queue = new Queue<int>(locks);
             Stack<int> stack = new Stack<int>(bullets);
+            Queue<int> queue = new Queue<int>(locks);
 
+            // CODE LOGIC
+            DestroyingLocks(stack, queue, priceForEachBullet, sizeOfGunBarrel, valueOfIntelligence);
+        }
+
+        static void DestroyingLocks(Stack<int> stack, Queue<int> queue, int priceForEachBullet, int sizeOfGunBarrel, int valueOfIntelligence)
+        {
+            // CODE LOGIC
             decimal priceForAllBullets = 0;
             int bulletCount = 0;
 
             while (stack.Count > 0)
             {
 
-                if (bulletCount == sizeOfGunBarrel)
-                {
-                    Console.WriteLine("Reloading!");
-                    bulletCount = 0;
-                    continue;
-                }
+                bulletCount = CheckIfSamNeedsToReload(bulletCount, sizeOfGunBarrel);
 
-                if (queue.Count == 0)
+                // POTENTIONAL OUTPUT IF THERE ARE STILL BULLETS BUT LOCKS ARE DESTROYED
+                if (CheckIfSamDestroyedAllLocks(stack, queue, valueOfIntelligence, priceForAllBullets))
                 {
-                    Console.WriteLine($"{stack.Count} bullets left. Earned ${valueOfIntelligence - priceForAllBullets}");
-                    break;
+                    return;
                 }
 
                 int bulletSize = stack.Pop();
@@ -53,6 +56,36 @@ namespace _11._Key_Revolver___Exercise
                 bulletCount++;
             }
 
+            // OUTPUT
+            PrintOutput(queue, stack, valueOfIntelligence, priceForAllBullets);
+        }
+
+        static int CheckIfSamNeedsToReload(int bulletCount, int sizeOfGunBarrel)
+        {
+            if (bulletCount == sizeOfGunBarrel)
+            {
+                Console.WriteLine("Reloading!");
+                bulletCount = 0;
+            }
+
+            return bulletCount;
+        }
+
+        static bool CheckIfSamDestroyedAllLocks(Stack<int> stack, Queue<int> queue, int valueOfIntelligence, decimal priceForAllBullets)
+        {
+            // POTENTIONAL OUTPUT IF THERE ARE STILL BULLETS BUT LOCKS ARE DESTROYED
+            if (queue.Count == 0)
+            {
+                Console.WriteLine($"{stack.Count} bullets left. Earned ${valueOfIntelligence - priceForAllBullets}");
+                return true;
+            }
+
+            return false;
+        }
+
+        static void PrintOutput(Queue<int> queue, Stack<int> stack, int valueOfIntelligence, decimal priceForAllBullets)
+        {
+            // OUTPUT
             if (stack.Count == 0 && queue.Count == 0)
             {
                 Console.WriteLine($"{stack.Count} bullets left. Earned ${valueOfIntelligence - priceForAllBullets}");
