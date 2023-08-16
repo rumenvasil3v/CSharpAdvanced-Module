@@ -43,8 +43,6 @@ namespace _09._Simple_Text_Editor
                     case "2":
                         int countCharactersToRemove = int.Parse(command[1]);
 
-                        string modifiedString = string.Empty;
-
                         if (stack.Count == 0)
                         {
                             break;
@@ -52,12 +50,9 @@ namespace _09._Simple_Text_Editor
 
                         string currentText = stack.Peek();
 
-                        for (int t = 0; t < currentText.Length - countCharactersToRemove; t++)
-                        {
-                            modifiedString += currentText[t];
-                        }
+                        currentText = currentText.Remove(currentText.Length - countCharactersToRemove);
 
-                        stack.Push(modifiedString);
+                        stack.Push(currentText);
                         break;
                     case "3":
                         int indexToPrint = int.Parse(command[1]);
@@ -86,8 +81,8 @@ namespace _09._Simple_Text_Editor
         {
             if (stack.Count > 0)
             {
-                string currentText = stack.Pop();
-                stack.Push(currentText);
+                string currentText = stack.Peek();
+
                 currentText += text;
                 stack.Push(currentText);
                 return;
