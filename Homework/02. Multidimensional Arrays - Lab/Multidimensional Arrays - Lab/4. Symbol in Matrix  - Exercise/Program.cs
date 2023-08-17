@@ -25,16 +25,34 @@ namespace _4._Symbol_in_Matrix
             }
 
             char symbolToFind = char.Parse(Console.ReadLine());
-
-            StringBuilder sb = new StringBuilder();
-            foreach (var ch in squareMatrix)
+            int[] symbolRowCol = new int[2];
+            bool isContained = false;
+            
+            for (int row = 0; row < squareMatrix.GetLength(0); row++)
             {
-                sb.Append(ch);
+                StringBuilder sb = new StringBuilder();
+
+                for (int col = 0; col < squareMatrix.GetLength(1); col++)
+                { 
+                    sb.Append(squareMatrix[row, col]);
+                    if (sb.ToString().Contains(symbolToFind))
+                    {
+                        isContained = true;
+                        symbolRowCol[0] = row;
+                        symbolRowCol[1] = col;
+                        break;
+                    }
+                }
+
+                if (isContained)
+                {
+                    break;
+                }
             }
 
-            if (sb.ToString().Contains(symbolToFind))
+            if (isContained)
             {
-
+                Console.WriteLine($"({string.Join(", ", symbolRowCol)})");
             }
             else
             {
