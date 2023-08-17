@@ -18,11 +18,7 @@
                 string elements = Console.ReadLine();
                 string[] matrixElements = elements.Split(", ");
 
-                foreach (var m in matrix)
-                {
-                    matrix[row, m] = int.Parse(matrixElements[m]);
-                    sum += m;
-                }
+                
             }
 
             Console.WriteLine(sum);
