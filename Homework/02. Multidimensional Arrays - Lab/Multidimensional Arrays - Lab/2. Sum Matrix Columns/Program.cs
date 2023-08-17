@@ -14,7 +14,7 @@
 
             AddingElementsToMatrix(matrix);
 
-            SummingMatrixColumnElements(matrix);
+            SumMatrixColumnElements(matrix);
         }
 
         static void AddingElementsToMatrix(int[,] matrix)
@@ -31,7 +31,7 @@
             }
         }
 
-        static void SummingMatrixColumnElements(int[,] matrix)
+        static void SumMatrixColumnElements(int[,] matrix)
         {
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
