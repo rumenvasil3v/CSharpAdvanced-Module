@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Jagged-Array Modificatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. Pascal Triangle", "7. Pascal Triangle\7. Pascal Triangle.csproj", "{45633B69-A853-46B8-A416-AF83452DCD49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Sum Matrix Elements- Exercise", "1. Sum Matrix Elements- Exercise\1. Sum Matrix Elements- Exercise.csproj", "{8386F3B6-413C-4767-ADBE-472ABA7C05E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Sum Matrix Elements- Exercise", "1. Sum Matrix Elements- Exercise\1. Sum Matrix Elements- Exercise.csproj", "{8386F3B6-413C-4767-ADBE-472ABA7C05E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Symbol in Matrix  - Exercise", "4. Symbol in Matrix  - Exercise\4. Symbol in Matrix  - Exercise.csproj", "{E105BBE5-5AFB-4EE3-9C43-F8AB5601E611}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{8386F3B6-413C-4767-ADBE-472ABA7C05E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8386F3B6-413C-4767-ADBE-472ABA7C05E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8386F3B6-413C-4767-ADBE-472ABA7C05E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E105BBE5-5AFB-4EE3-9C43-F8AB5601E611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E105BBE5-5AFB-4EE3-9C43-F8AB5601E611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E105BBE5-5AFB-4EE3-9C43-F8AB5601E611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E105BBE5-5AFB-4EE3-9C43-F8AB5601E611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
