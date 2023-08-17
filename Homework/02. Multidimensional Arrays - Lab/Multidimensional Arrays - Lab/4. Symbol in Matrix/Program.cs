@@ -38,7 +38,7 @@
                 }
             }
 
-            Console.WriteLine("{0} does not occur in the matrix", symbolToind);
+            Console.WriteLine("{0} does not occur in the matrix", symbolToFind);
         }
     }
 }
