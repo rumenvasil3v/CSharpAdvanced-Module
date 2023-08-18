@@ -23,6 +23,7 @@ namespace _5._Square_With_Maximum_Sum_NxN
 
             AddingElementsToMatrix(matrix);
 
+            Console.Write("Read size of square submatrixes in matrix: ");
             int submatrixSize = int.Parse(Console.ReadLine());
 
             FindBestSubMatrixSum(matrix, submatrixSize);
@@ -50,27 +51,33 @@ namespace _5._Square_With_Maximum_Sum_NxN
             long bestSubmatrixSum = long.MinValue; ;
             for (int row = 0; row <= matrix.GetLength(0) - submatrixSize; row++)
             {
+                int subMatrixRow = row;
+
                 for (int col = 0; col <= matrix.GetLength(1) - submatrixSize; col++)
                 {
                     int subMatrixCol = col;
-                     currentSubmatrixSum = SumElementsOfCurrentSubmatrix(matrix, submatrixSize, subMatrixCol + submatrixSize, row, col);
+                    currentSubmatrixSum = SumElementsOfCurrentSubmatrix(matrix, subMatrixCol + submatrixSize, subMatrixRow + submatrixSize, row, col);
                     if (currentSubmatrixSum > bestSubmatrixSum)
                     {
+                        AppendBestSubmatrix(sb, matrix, submatrixSize, subMatrixCol, subMatrixRow, row, col);
                         bestSubmatrixSum = currentSubmatrixSum;
                     }
                 }
             }
 
-            //Console.WriteLine(sb.ToString());
-            Console.WriteLine(bestSubmatrixSum);
+            if (sb.Length > 0)
+            {
+                Console.Write(sb.ToString());
+                Console.WriteLine(bestSubmatrixSum);
+            }
         }
 
-        static long SumElementsOfCurrentSubmatrix(int[,] matrix, int submatrixSize, int subMatrixCol, int row, int col)
+        static long SumElementsOfCurrentSubmatrix(int[,] matrix, int subMatrixCol, int submatrixRow, int row, int col)
         {
-            
+
             long currentSubmatrixSum = 0;
 
-            for (int currentRow = row; currentRow < submatrixSize; currentRow++)
+            for (int currentRow = row; currentRow < submatrixRow; currentRow++)
             {
                 for (int currentCol = col; currentCol < subMatrixCol; currentCol++)
                 {
@@ -79,6 +86,24 @@ namespace _5._Square_With_Maximum_Sum_NxN
             }
 
             return currentSubmatrixSum;
+        }
+
+        static void AppendBestSubmatrix(StringBuilder sb, int[,] matrix, int submatrixSize, int subMatrixCol, int subMatrixRow, int row, int col)
+        {
+            sb.Clear();
+
+            for (int i = row; i < subMatrixRow + submatrixSize; i++)
+            {
+                for (int j = col; j < subMatrixCol + submatrixSize; j++)
+                {
+                    if (j == submatrixSize + subMatrixCol - 1)
+                    {
+                        sb.AppendLine($"{matrix[i, j]}");
+                        break;
+                    }
+                    sb.Append($"{matrix[i, j]} ");
+                }
+            }
         }
     }
 }
