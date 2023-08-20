@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Snake Moves", "5. Snake 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Snake Moves - Exercise", "5. Snake Moves - Exercise\5. Snake Moves - Exercise.csproj", "{FF5982A0-819C-413B-B790-AD4E7241B835}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Snake Moves", "5. Snake Moves\5. Snake Moves.csproj", "{30DB0BC3-F6DC-4976-9B13-E03011F67FD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +43,13 @@ Global
 		{30DB0BC3-F6DC-4976-9B13-E03011F67FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30DB0BC3-F6DC-4976-9B13-E03011F67FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30DB0BC3-F6DC-4976-9B13-E03011F67FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{FF5982A0-819C-413B-B790-AD4E7241B835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF5982A0-819C-413B-B790-AD4E7241B835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF5982A0-819C-413B-B790-AD4E7241B835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF5982A0-819C-413B-B790-AD4E7241B835}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> 16bb77463ae740cdd8946532eab9904b1da0a395
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
