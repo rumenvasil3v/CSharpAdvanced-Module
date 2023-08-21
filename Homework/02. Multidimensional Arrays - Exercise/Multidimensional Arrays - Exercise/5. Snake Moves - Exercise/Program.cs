@@ -1,105 +1,71 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
-namespace _5._Snake_Moves
+namespace Snake_Moves
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            string[] isleOfTheSnakeMatrixArguments = input.Split(' ');
+            int[] nums = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            int r = nums[0];
+            int c = nums[1];
+            char[,] matrix = new char[r, c];
+            string snake = Console.ReadLine();
+            int counter = 0;
+            var myQue = new Queue<char>();
 
-            string snakeLength = Console.ReadLine();
+            int capacity = r * c;
 
-            int matrixRows = int.Parse(isleOfTheSnakeMatrixArguments[0]);
-            int matrixColumns = int.Parse(isleOfTheSnakeMatrixArguments[1]);
-
-            char[,] isleOfTheSnakeMatrix = new char[matrixRows, matrixColumns];
-
-            SnakePatternInMatrix(isleOfTheSnakeMatrix, snakeLength);
-            PrintMatrix(isleOfTheSnakeMatrix);
-        }
-
-        static void SnakePatternInMatrix(char[,] isleOfTheSnakeMatrix, string snakeLength)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(snakeLength);
-            char firstCharacter = '\0';
-            char leftCharacter = '\0';
-            string lastCharacters = string.Empty;
-            int count = 0;
-
-            if (snakeLength.Length > isleOfTheSnakeMatrix.GetLength(1))
+            for (int i = 0; i < snake.Length; i++)
             {
+                myQue.Enqueue(snake[i]);
+                counter++;
 
-                for (int row = 0; row < isleOfTheSnakeMatrix.GetLength(0); row++)
+                if (counter == capacity)
                 {
-                    for (int col = 0; col < isleOfTheSnakeMatrix.GetLength(1); col++)
-                    {
-                        isleOfTheSnakeMatrix[row, col] = sb[col];
-                        if (col == isleOfTheSnakeMatrix.GetLength(1) - 1)
-                        {
-                            lastCharacters += isleOfTheSnakeMatrix[row, col];
-                        }
-                    }
-
-                    count++;
-                    if (count == 2)
-                    {
-                        firstCharacter = sb[0];
-                        count = 0;
-                        sb.Clear();
-                        sb.Append(lastCharacters);
-
-                        for (int c = isleOfTheSnakeMatrix.GetLength(1) - 2; c >= 1; c--)
-                        {
-                            sb.Append(isleOfTheSnakeMatrix[row, c]);
-                        }
-
-                        sb.Append(firstCharacter);
-
-                        lastCharacters = string.Empty;
-                    }
-                    else
-                    {
-                        for (int l = isleOfTheSnakeMatrix.GetLength(1); l < snakeLength.Length; l++)
-                        {
-                            leftCharacter = sb[l];
-                        }
-
-                        sb.Clear();
-
-                        for (int c = isleOfTheSnakeMatrix.GetLength(1) - 2; c >= 0; c--)
-                        {
-                            sb.Append(isleOfTheSnakeMatrix[row, c]);
-                        }
-
-                        sb.Append(leftCharacter);
-                        sb.Append(isleOfTheSnakeMatrix[row, isleOfTheSnakeMatrix.GetLength(1) - 1]);
-                    }
+                    break;
+                }
+                if (i == snake.Length - 1)
+                {
+                    i = -1;
                 }
             }
-            else if (snakeLength.Length < isleOfTheSnakeMatrix.GetLength(1))
+
+            var a = 0;
+
+            for (int j = 0; j < r; j++)
             {
-                for (int row = 0; row < isleOfTheSnakeMatrix.GetLength(0); row++)
+                if (j % 2 == 0)
                 {
-
+                    for (int i = 0; i < c; i++)
+                    {
+                        matrix[j, i] = myQue.Dequeue();
+                    }
                 }
-            }
-        }
+                else if (j % 2 != 0)
+                {
+                    for (int k = c - 1; k > -1; k--)
+                    {
+                        matrix[j, k] = myQue.Dequeue();
+                    }
+                }
 
-        static void PrintMatrix(char[,] matrix)
-        {
+            }
+
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    Console.Write($"{matrix[row, col]}");
+                    Console.Write("{0}", matrix[row, col]);
                 }
 
                 Console.WriteLine();
             }
+
+
         }
     }
 }
