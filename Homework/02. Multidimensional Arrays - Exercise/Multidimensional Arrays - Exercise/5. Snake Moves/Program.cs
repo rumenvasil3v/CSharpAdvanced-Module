@@ -16,21 +16,96 @@ namespace _5._Snake_Moves
             int matrixRows = int.Parse(isleOfTheSnakeMatrixArguments[0]);
             int matrixColumns = int.Parse(isleOfTheSnakeMatrixArguments[1]);
 
-            char[,] isleOfTheSnakeMatrix = new char[matrixRows, matrixColumns];
+            char[,] snakeMatrix = new char[matrixRows, matrixColumns];
 
-            SnakePatternInMatrix(isleOfTheSnakeMatrix, snakeLength);
-            PrintMatrix(isleOfTheSnakeMatrix);
+            SnakePatternInMatrix(snakeMatrix, snakeLength);
+            PrintMatrix(snakeMatrix);
         }
 
-        static void SnakePatternInMatrix(char[,] isleOfTheSnakeMatrix, string snakeLength)
+        static void SnakePatternInMatrix(char[,] snakeMatrix, string snakeLength)
         {
             StringBuilder sb = new StringBuilder();
-            StringBuilder sb2 = new StringBuilder();
-            sb2.Append(snakeLength);
-            sb.Append(snakeLength);
 
-          
-            
+            int currentRow = 0;
+            int count = 0;
+            sb.Append(snakeLength);
+            string text = sb.ToString();
+
+            for (int row = 0; row < snakeMatrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < snakeMatrix.GetLength(1); col++)
+                {
+                    snakeMatrix[row, col] = text[col];
+                }
+
+                if (count - 1 == snakeLength.Length - snakeMatrix.GetLength(1))
+                {
+                    currentRow = row;
+                    count = 0;
+                }
+
+                text = string.Empty;
+
+                if (row % 2 == 0)
+                {
+                    for (int c = snakeMatrix.GetLength(1) - 1 - (snakeLength.Length - snakeMatrix.GetLength(1) - count); c >= 0; c--)
+                    {
+                        text += snakeMatrix[currentRow, c];
+                    }
+
+                    if (text.Length < snakeMatrix.GetLength(1))
+                    {
+                        int index = 0;
+                        if (text[text.Length - 1] == sb[0])
+                        {
+                            index = sb.Length - 1;
+                        }
+                        else
+                        {
+                            index = sb.Length - 1 - (sb.Length - text.Length);
+                        }
+
+                        for (int t = index; t >= 0; t--)
+                        {
+                            if (text.Length == snakeMatrix.GetLength(1))
+                            {
+                                break;
+                            }
+
+                            text += sb[t];
+                        }
+                    }
+
+                    
+                }
+                else if (row % 2 == 1)
+                {
+                    for (int c = snakeMatrix.GetLength(1) - 1 - (snakeLength.Length - snakeMatrix.GetLength(1) - count); c < snakeMatrix.GetLength(1); c++)
+                    {
+                        text += snakeMatrix[currentRow, c];
+                    }
+
+                    if (text.Length < snakeMatrix.GetLength(1))
+                    {
+                        for (int t = snakeMatrix.GetLength(1); t < sb.Length; t++)
+                        {
+                            if (text.Length == snakeMatrix.GetLength(1))
+                            {
+                                break;
+                            }
+
+                            text += sb[t];
+
+                            if (t + 1 == sb.Length)
+                            {
+                                t = -1;
+                            }
+                        }
+                    }
+                }
+
+                count++;
+            }
         }
 
         static void PrintMatrix(char[,] matrix)
