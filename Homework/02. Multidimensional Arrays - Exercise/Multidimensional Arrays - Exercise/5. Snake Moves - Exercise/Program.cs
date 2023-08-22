@@ -64,8 +64,6 @@ namespace Snake_Moves
 
                 Console.WriteLine();
             }
-
-
         }
     }
 }
