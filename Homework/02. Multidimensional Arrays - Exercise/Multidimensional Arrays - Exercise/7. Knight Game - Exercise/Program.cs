@@ -1,5 +1,5 @@
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 
@@ -100,7 +100,7 @@ namespace CurrentTask
         }
     }
 }
-﻿/*
+/*
 8
 000KKK00
 0K00KKKK
@@ -110,7 +110,7 @@ K0K0000K
 KK00000K
 00K0K000
 000K000K
- */
+*/
 
 namespace _7._Knight_Game
 {
@@ -122,6 +122,22 @@ namespace _7._Knight_Game
 
             char[,] chessMatrix = new char[sizeOfBoard, sizeOfBoard];
 
+            AddingElementsToMatrix(chessMatrix);
+
+            int countOfattackedKnights = 0;
+            for (int row = 0; row < chessMatrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < chessMatrix.GetLength(1); col++)
+                {
+
+                }
+            }
+
+            Console.WriteLine(countOfattackedKnights);
+        }
+
+        static void AddingElementsToMatrix(char[,] chessMatrix)
+        {
             for (int row = 0; row < chessMatrix.GetLength(0); row++)
             {
                 string chessMatrixElements = Console.ReadLine();
@@ -131,204 +147,6 @@ namespace _7._Knight_Game
                     chessMatrix[row, col] = chessMatrixElements[col];
                 }
             }
-
-            int countOfattackedKnights = 0;
-            for (int row = 0; row < chessMatrix.GetLength(0); row++)
-            {
-                for (int col = 0; col < chessMatrix.GetLength(1); col++)
-                {
-                    if (chessMatrix[row, col] == 'K')
-                    {
-
-                        if (col - 2 >= 0)
-                        {
-                            if (row + 1 < chessMatrix.GetLength(0))
-                            {
-                                char firstCharacter = chessMatrix[row + 1, col - 2];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row + 1, col - 2] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-
-                            if (row - 1 >= 0)
-                            {
-                                char secondCharacter = chessMatrix[row - 1, col - 2];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row - 1, col - 2] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-                        }
-                        if (col + 2 < chessMatrix.GetLength(1))
-                        {
-                            if (row + 1 < chessMatrix.GetLength(0))
-                            {
-                                char firstCharacter = chessMatrix[row + 1, col + 2];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row + 1, col + 2] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-
-                            if (row - 1 >= 0)
-                            {
-                                char secondCharacter = chessMatrix[row - 1, col + 2];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row - 1, col + 2] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-                        }
-                        if (row - 2 >= 0)
-                        {
-                            if (col + 1 < chessMatrix.GetLength(1))
-                            {
-                                char firstCharacter = chessMatrix[row - 2, col + 1];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row - 2, col + 1] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-
-                            if (col - 1 >= 0)
-                            {
-                                char secondCharacter = chessMatrix[row - 2, col - 1];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row - 2, col - 1] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-                        }
-                        if (row + 2 < chessMatrix.GetLength(0))
-                        {
-                            if (col + 1 < chessMatrix.GetLength(1))
-                            {
-                                char firstCharacter = chessMatrix[row + 2, col + 1];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row + 2, col + 1] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-
-                            if (col - 1 >= 0)
-                            {
-                                char secondCharacter = chessMatrix[row + 2, col - 1];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row + 2, col - 1] = 'O';
-                                    countOfattackedKnights++;
-
-                                }
-                            }
-                        }
-                        if (col - 1 >= 0)
-                        {
-                            if (row + 2 < chessMatrix.GetLength(0))
-                            {
-                                char firstCharacter = chessMatrix[row + 2, col - 1];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row + 2, col - 1] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-
-                            if (row - 2 >= 0)
-                            {
-                                char secondCharacter = chessMatrix[row - 2, col - 1];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row - 2, col - 1] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-                        }
-                        if (col + 1 < chessMatrix.GetLength(1))
-                        {
-                            if (row + 2 < chessMatrix.GetLength(0))
-                            {
-                                char firstCharacter = chessMatrix[row + 2, col + 1];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row + 2, col + 1] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-
-                            if (row - 2 >= 0)
-                            {
-                                char secondCharacter = chessMatrix[row - 2, col + 1];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row - 2, col + 1] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-                        }
-                        if (row - 1 >= 0)
-                        {
-                            if (col - 2 >= 0)
-                            {
-                                char firstCharacter = chessMatrix[row - 1, col - 2];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row - 1, col - 2] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-
-                            if (col + 2 < chessMatrix.GetLength(1))
-                            {
-                                char secondCharacter = chessMatrix[row - 1, col + 2];
-                                if (secondCharacter == 'K')
-                                {
-                                    chessMatrix[row - 1, col + 2] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-                        }
-                        if (row + 1 < chessMatrix.GetLength(0))
-                        {
-                            if (col - 2 >= 0)
-                            {
-                                char firstCharacter = chessMatrix[row + 1, col - 2];
-                                if (firstCharacter == 'K')
-                                {
-                                    chessMatrix[row + 1, col - 2] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-
-                            if (col + 2 < chessMatrix.GetLength(1))
-                            {
-                                char secondChar = chessMatrix[row + 1, col + 2];
-                                if (secondChar == 'K')
-                                {
-                                    chessMatrix[row + 1, col + 2] = 'O';
-                                    countOfattackedKnights++;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            Console.WriteLine(countOfattackedKnights);
         }
     }
 }
