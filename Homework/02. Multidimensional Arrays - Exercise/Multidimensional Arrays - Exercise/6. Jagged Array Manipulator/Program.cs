@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Linq;
 
 namespace _6._Jagged_Array_Manipulator
 {
@@ -8,14 +9,14 @@ namespace _6._Jagged_Array_Manipulator
         {
             int numberOfRows = int.Parse(Console.ReadLine());
 
-            int[][] jaggedArray = new int[numberOfRows][];
+            double[][] jaggedArray = new double[numberOfRows][];
 
             for (int row = 0; row < jaggedArray.Length; row++)
             {
                 string elements = Console.ReadLine();
                 string[] jaggedArrayElements = elements.Split(' ');
 
-                jaggedArray[row] = new int[jaggedArrayElements.Length];
+                jaggedArray[row] = new double[jaggedArrayElements.Length];
 
                 for (int col = 0; col < jaggedArray[row].Length; col++)
                 {

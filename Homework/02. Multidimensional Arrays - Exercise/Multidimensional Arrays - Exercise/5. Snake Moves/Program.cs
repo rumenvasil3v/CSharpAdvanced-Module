@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 
 namespace _5._Snake_Moves
@@ -26,85 +27,36 @@ namespace _5._Snake_Moves
         {
             StringBuilder sb = new StringBuilder();
 
-            int currentRow = 0;
             int count = 0;
             sb.Append(snakeLength);
-            string text = sb.ToString();
 
             for (int row = 0; row < snakeMatrix.GetLength(0); row++)
             {
-                for (int col = 0; col < snakeMatrix.GetLength(1); col++)
-                {
-                    snakeMatrix[row, col] = text[col];
-                }
-
-                if (count - 1 == snakeLength.Length - snakeMatrix.GetLength(1))
-                {
-                    currentRow = row;
-                    count = 0;
-                }
-
-                text = string.Empty;
-
                 if (row % 2 == 0)
                 {
-                    for (int c = snakeMatrix.GetLength(1) - 1 - (snakeLength.Length - snakeMatrix.GetLength(1) - count); c >= 0; c--)
+                    for (int col = 0; col < snakeMatrix.GetLength(1); col++)
                     {
-                        text += snakeMatrix[currentRow, c];
-                    }
+                        snakeMatrix[row, col] = sb[count++];
 
-                    if (text.Length < snakeMatrix.GetLength(1))
-                    {
-                        int index = 0;
-                        if (text[text.Length - 1] == sb[0])
+                        if (count == snakeLength.Length)
                         {
-                            index = sb.Length - 1;
-                        }
-                        else
-                        {
-                            index = sb.Length - 1 - (sb.Length - text.Length);
-                        }
-
-                        for (int t = index; t >= 0; t--)
-                        {
-                            if (text.Length == snakeMatrix.GetLength(1))
-                            {
-                                break;
-                            }
-
-                            text += sb[t];
+                            count = 0;
                         }
                     }
-
-                    
                 }
-                else if (row % 2 == 1)
+                
+                if (row % 2 == 1)
                 {
-                    for (int c = snakeMatrix.GetLength(1) - 1 - (snakeLength.Length - snakeMatrix.GetLength(1) - count); c < snakeMatrix.GetLength(1); c++)
+                    for (int col = snakeMatrix.GetLength(1) - 1; col >= 0; col--)
                     {
-                        text += snakeMatrix[currentRow, c];
-                    }
+                        snakeMatrix[row, col] = sb[count++];
 
-                    if (text.Length < snakeMatrix.GetLength(1))
-                    {
-                        for (int t = snakeMatrix.GetLength(1); t < sb.Length; t++)
+                        if (count == snakeLength.Length)
                         {
-                            if (text.Length == snakeMatrix.GetLength(1))
-                            {
-                                break;
-                            }
-
-                            text += sb[t];
-
-                            if (t + 1 == sb.Length)
-                            {
-                                t = -1;
-                            }
+                            count = 0;
                         }
                     }
                 }
-
-                count++;
             }
         }
 
