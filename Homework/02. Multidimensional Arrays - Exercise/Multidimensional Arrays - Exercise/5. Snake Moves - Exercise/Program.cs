@@ -17,6 +17,7 @@ namespace Snake_Moves
 
             int matrixRows = int.Parse(matrixArguments[0]);
             int matrixCols = int.Parse(matrixArguments[1]);
+<<<<<<< HEAD
 
             char[,] matrix = new char[matrixRows, matrixCols];
 
@@ -62,6 +63,10 @@ namespace Snake_Moves
 
                 Console.WriteLine();
             }
+=======
+
+            char[,] matrix = new char[matrixRows, matrixCols];
+>>>>>>> d619e64948b808d6a4ff1648b98d8b20789d1cfa
         }
     }
 }
