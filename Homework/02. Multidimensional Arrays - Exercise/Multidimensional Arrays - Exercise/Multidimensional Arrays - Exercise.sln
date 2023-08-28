@@ -29,7 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010. Radioactive Mutant Vam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010. Radioactive Bunnies - Exercise", "10. Radioactive Bunnies - Exercise\010. Radioactive Bunnies - Exercise.csproj", "{D498D3B4-F059-4D59-B7A2-A9E9CB6B09DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Matrix of Palindromes", "11. Matrix of Palindromes\11. Matrix of Palindromes.csproj", "{FF145010-AB32-458B-B9AB-C0E0A5A634DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Matrix of Palindromes", "11. Matrix of Palindromes\1. Matrix of Palindromes.csproj", "{FF145010-AB32-458B-B9AB-C0E0A5A634DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Matrix of Palindrome - Exercise", "011. Matrix of Palindrome - Exercise\1. Matrix of Palindrome - Exercise.csproj", "{617FEF59-6836-4E87-9354-9B01011FFCCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Rubiks Matrix", "5. Rubiks Matrix\5. Rubiks Matrix.csproj", "{19F2DE63-0260-4197-9C6E-525D99FF08EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Target Practice", "6. Target Practice\6. Target Practice.csproj", "{5DCC37D6-4FFF-4141-976D-B5666C6DD995}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +99,18 @@ Global
 		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617FEF59-6836-4E87-9354-9B01011FFCCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617FEF59-6836-4E87-9354-9B01011FFCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617FEF59-6836-4E87-9354-9B01011FFCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617FEF59-6836-4E87-9354-9B01011FFCCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F2DE63-0260-4197-9C6E-525D99FF08EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F2DE63-0260-4197-9C6E-525D99FF08EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F2DE63-0260-4197-9C6E-525D99FF08EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F2DE63-0260-4197-9C6E-525D99FF08EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
