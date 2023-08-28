@@ -24,8 +24,6 @@ namespace _9._Miner
 
             //AddingElementsToMatrix(matrix);
             
-            
-
             string[] directions = Console.ReadLine()
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
