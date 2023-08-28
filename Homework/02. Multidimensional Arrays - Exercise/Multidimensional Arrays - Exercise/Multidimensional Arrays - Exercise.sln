@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Miner", "9. Miner\9. Min
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010. Radioactive Mutant Vampire Bunnies", "10. Radioactive Mutant Vampire Bunnies\010. Radioactive Mutant Vampire Bunnies.csproj", "{8F96BD23-AE45-4A5B-AEFD-2F988B1EC2AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010. Radioactive Bunnies - Exercise", "10. Radioactive Bunnies - Exercise\010. Radioactive Bunnies - Exercise.csproj", "{D498D3B4-F059-4D59-B7A2-A9E9CB6B09DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010. Radioactive Bunnies - Exercise", "10. Radioactive Bunnies - Exercise\010. Radioactive Bunnies - Exercise.csproj", "{D498D3B4-F059-4D59-B7A2-A9E9CB6B09DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Matrix of Palindromes", "11. Matrix of Palindromes\11. Matrix of Palindromes.csproj", "{FF145010-AB32-458B-B9AB-C0E0A5A634DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{D498D3B4-F059-4D59-B7A2-A9E9CB6B09DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D498D3B4-F059-4D59-B7A2-A9E9CB6B09DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D498D3B4-F059-4D59-B7A2-A9E9CB6B09DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF145010-AB32-458B-B9AB-C0E0A5A634DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
