@@ -19,11 +19,7 @@ namespace _6._Target_Practice
 
             DestroySnake(matrix);
 
-            PrintMatrix(matrix);
-
             MoveSymbols(matrix);
-
-            PrintMatrix(matrix);
         }
 
         static void MoveSymbols(char[,] matrix)
