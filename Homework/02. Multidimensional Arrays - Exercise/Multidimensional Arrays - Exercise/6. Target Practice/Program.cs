@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _6._Target_Practice
 {
@@ -15,8 +16,6 @@ namespace _6._Target_Practice
             char[,] matrix = new char[matrixRows, matrixCols];
             AddingElementsToMatrix(matrix);
 
-            PrintMatrix(matrix);
-
             DestroySnake(matrix);
 
             MoveSymbols(matrix);
@@ -24,52 +23,39 @@ namespace _6._Target_Practice
 
         static void MoveSymbols(char[,] matrix)
         {
+            Queue<char> queue = new Queue<char>();
+         
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                for (int row = 0; row < matrix.GetLength(0); row++)
+                int countWhiteSpaces = 0;
+
+                for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
                 {
                     if (matrix[row, col] == ' ')
                     {
-                        int bestSpace = FindBestSpace(matrix, col);
-
-                        for (int r = bestSpace; r >= 0; r--)
-                        {
-                            if (r == 0)
-                            {
-                                break;
-                            }
-
-                            char currentCharacter = matrix[r - 1, col];
-                            matrix[r, col] = currentCharacter;
-                            matrix[r - 1, col] = ' ';
-                        }
-
-                        Console.WriteLine();
-                        PrintMatrix(matrix);
+                        countWhiteSpaces++;
                     }
-                }
-            }
-        }
-
-        static int FindBestSpace(char[,] matrix, int col)
-        {
-            int best = int.MinValue;
-
-            for (int row = 0; row < matrix.GetLength(0); row++)
-            {
-
-                if (matrix[row, col] == ' ')
-                {
-                    int currentSpaceRow = row;
-
-                    if (currentSpaceRow > best)
+                    else
                     {
-                        best = currentSpaceRow;
+                        queue.Enqueue(matrix[row, col]);
                     }
+                }
+
+                for (int w = 0; w < countWhiteSpaces; w++)
+                {
+                    queue.Enqueue(' ');
                 }
             }
 
-            return best;
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
+                {
+                    matrix[row, col] = queue.Dequeue();
+                }
+            }
+
+            PrintMatrix(matrix);
         }
 
         static void DestroySnake(char[,] matrix)
@@ -102,7 +88,7 @@ namespace _6._Target_Practice
             {
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    Console.Write(matrix[row, col] + " ");
+                    Console.Write(matrix[row, col]);
                 }
 
                 Console.WriteLine();
