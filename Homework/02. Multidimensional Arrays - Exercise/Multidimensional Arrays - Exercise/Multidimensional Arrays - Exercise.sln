@@ -33,6 +33,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Rubiks Matrix", "5. Rubi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Target Practice", "6. Target Practice\6. Target Practice.csproj", "{5DCC37D6-4FFF-4141-976D-B5666C6DD995}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Lego Blocks", "7. Lego Blocks\7. Lego Blocks.csproj", "{AAD9FA40-B563-455B-90F1-5E59ABD767EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. Crossfire", "9. Crossfire\9. Crossfire.csproj", "{E4636CF6-D69D-431B-9B7E-2E19E936847A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +103,14 @@ Global
 		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DCC37D6-4FFF-4141-976D-B5666C6DD995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD9FA40-B563-455B-90F1-5E59ABD767EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD9FA40-B563-455B-90F1-5E59ABD767EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD9FA40-B563-455B-90F1-5E59ABD767EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD9FA40-B563-455B-90F1-5E59ABD767EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4636CF6-D69D-431B-9B7E-2E19E936847A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4636CF6-D69D-431B-9B7E-2E19E936847A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4636CF6-D69D-431B-9B7E-2E19E936847A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4636CF6-D69D-431B-9B7E-2E19E936847A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
