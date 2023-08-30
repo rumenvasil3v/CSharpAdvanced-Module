@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Cities by Continent and
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Record Unique Names", "06. Record Unique Names\06. Record Unique Names.csproj", "{C646D118-4E57-4FD1-A22A-87D0373DC6EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Parking Lot", "07. Parking Lot\07. Parking Lot.csproj", "{CC5028B8-AFCB-4ADA-8C3C-CB2EB9849958}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C646D118-4E57-4FD1-A22A-87D0373DC6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C646D118-4E57-4FD1-A22A-87D0373DC6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C646D118-4E57-4FD1-A22A-87D0373DC6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5028B8-AFCB-4ADA-8C3C-CB2EB9849958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5028B8-AFCB-4ADA-8C3C-CB2EB9849958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5028B8-AFCB-4ADA-8C3C-CB2EB9849958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5028B8-AFCB-4ADA-8C3C-CB2EB9849958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
