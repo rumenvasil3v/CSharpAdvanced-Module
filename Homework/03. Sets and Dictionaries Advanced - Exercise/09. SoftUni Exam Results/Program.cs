@@ -6,7 +6,7 @@ namespace _09._SoftUni_Exam_Results
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
