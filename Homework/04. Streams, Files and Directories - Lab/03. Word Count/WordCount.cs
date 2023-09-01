@@ -1,6 +1,6 @@
-﻿namespace _03._Word_Count
+﻿namespace WordCount
 {
-    internal class Program
+    public class WordCount
     {
         static void Main(string[] args)
         {
