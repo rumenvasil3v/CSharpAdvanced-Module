@@ -1,4 +1,4 @@
-﻿namespace _03._Copy_Binary_File
+﻿namespace _02._Line_Numbers
 {
     internal class Program
     {
