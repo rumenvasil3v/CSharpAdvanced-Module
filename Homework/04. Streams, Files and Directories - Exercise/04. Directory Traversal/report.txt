@@ -1,0 +1,10 @@
+.cs
+--Program.cs - 155
+--LineNumbers.cs - 1327
+.txt
+--text.txt - 123
+--output.txt - 171
+.csproj
+--02. Line Numbers.csproj - 303
+.zip
+--LineNumbers.zip - 835
