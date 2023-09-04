@@ -7,8 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Even Lines", "01. Even 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Line Numbers", "02. Line Numbers\02. Line Numbers.csproj", "{29F61D97-0D22-4EE7-923B-35400F22ADB6}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Copy Binary File", "03. Copy Binary File\03. Copy Binary File.csproj", "{C1439902-4594-4BBE-8C3B-D69CAD035A48}"
 EndProject
+=======
+>>>>>>> d7a3d256c34374dcb4217192d93403799b8a57db
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +26,13 @@ Global
 		{29F61D97-0D22-4EE7-923B-35400F22ADB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F61D97-0D22-4EE7-923B-35400F22ADB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29F61D97-0D22-4EE7-923B-35400F22ADB6}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{C1439902-4594-4BBE-8C3B-D69CAD035A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1439902-4594-4BBE-8C3B-D69CAD035A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1439902-4594-4BBE-8C3B-D69CAD035A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1439902-4594-4BBE-8C3B-D69CAD035A48}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> d7a3d256c34374dcb4217192d93403799b8a57db
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
