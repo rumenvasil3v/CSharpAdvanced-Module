@@ -32,15 +32,22 @@
                 }
             }
 
+            StringBuilder sb = ReplaceCharacters(evenLines);
+            
+            return sb.ToString();
+        }
+
+        public static StringBuilder ReplaceCharacters(List<string> evenLines)
+        {
+            StringBuilder sb = new StringBuilder();
             Regex regex = new Regex(@"[,.?\-\!]");
 
-            StringBuilder sb = new StringBuilder();
             foreach (string line in evenLines)
             {
                 string currentLine = regex.Replace(line, "@");
 
                 string[] currentLineArray = currentLine.Split(' ');
-                
+
                 for (int n = currentLineArray.Length - 1; n >= 0; n--)
                 {
                     if (n == 0)
@@ -55,7 +62,7 @@
                 sb.AppendLine();
             }
 
-            return sb.ToString();
+            return sb;
         }
     }
 }
