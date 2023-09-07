@@ -7,21 +7,16 @@
         static void Main()
         {
             string path = Console.ReadLine();
-            //string reportFileName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //Console.WriteLine(reportFileName);
-            string reportFileName = @"..\..\..\report.txt";
+            string reportFileName = @"\juice.txt";
 
             Dictionary<string, Dictionary<string, double>> reportContent = TraverseDirectory(path);
 
             WriteReportToDesktop(reportContent, reportFileName);
         }
 
-        public static Dictionary<string, Dictionary<string, double>> TraverseDirectory(
-            string inputFolderPath
-        )
+        public static Dictionary<string, Dictionary<string, double>> TraverseDirectory(string inputFolderPath)
         {
-            Dictionary<string, Dictionary<string, double>> extensions =
-                new Dictionary<string, Dictionary<string, double>>();
+            Dictionary<string, Dictionary<string, double>> extensions = new Dictionary<string, Dictionary<string, double>>();
 
             foreach (var file in Directory.GetFiles(inputFolderPath))
             {
@@ -45,9 +40,11 @@
             string reportFileName
         )
         {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + reportFileName;
+
             try
             {
-                using (StreamWriter writer = new StreamWriter(reportFileName))
+                using (StreamWriter writer = new StreamWriter(path))
                 {
                     foreach (var kvp in textContent.OrderByDescending(x => x.Value.Count)
                                                    .ThenBy(x => x.Key))
@@ -56,7 +53,7 @@
 
                         foreach (var file in kvp.Value.OrderBy(x => x.Value))
                         {
-                            writer.WriteLine($"--{file.Key} - {file.Value}");
+                            writer.WriteLine($"--{file.Key} - {file.Value / 1024.0:F2}kb");
                         }
                     }
                 }
@@ -64,7 +61,7 @@
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception throw!!!");
-            } 
+            }
         }
     }
 }
