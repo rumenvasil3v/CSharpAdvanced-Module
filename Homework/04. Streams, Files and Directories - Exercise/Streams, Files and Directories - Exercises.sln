@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demoForBadLookingCode", "de
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. CopyDirectory", "05. CopyDirectory\05. CopyDirectory.csproj", "{1DA5DCC5-E21D-4CB9-922C-F525483F3261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Zip and Extracts", "06. Zip and Extracts\06. Zip and Extracts.csproj", "{4134739D-B36D-4719-BE26-97E3BB4788BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1DA5DCC5-E21D-4CB9-922C-F525483F3261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA5DCC5-E21D-4CB9-922C-F525483F3261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DA5DCC5-E21D-4CB9-922C-F525483F3261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4134739D-B36D-4719-BE26-97E3BB4788BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4134739D-B36D-4719-BE26-97E3BB4788BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4134739D-B36D-4719-BE26-97E3BB4788BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4134739D-B36D-4719-BE26-97E3BB4788BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
