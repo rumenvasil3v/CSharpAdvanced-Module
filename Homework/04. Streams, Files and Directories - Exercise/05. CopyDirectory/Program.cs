@@ -1,4 +1,15 @@
-﻿namespace CopyDirectory
+﻿/*
+D:\moi raboti\documents
+D:\moi raboti
+
+..\..\..\obj
+..\..\..\obj2
+
+..\net6.0
+..\net6.02
+ */
+
+namespace CopyDirectory
 {
     using System;
     using System.Diagnostics;
@@ -16,7 +27,22 @@
 
         public static void CopyAllFiles(string inputPath, string outputPath)
         {
-          
+            if (Directory.Exists(outputPath))
+            {
+                Directory.Delete(outputPath, true);
+            }
+
+            Directory.CreateDirectory(outputPath);
+
+            string[] files = Directory.GetFiles(inputPath);
+
+            foreach (string file in files)
+            {
+                string fileName = Path.GetFileName(file);
+                string copyDestination = Path.Combine(outputPath, fileName);
+
+                File.Copy(fileName, copyDestination);
+            }
         }
     }
 }

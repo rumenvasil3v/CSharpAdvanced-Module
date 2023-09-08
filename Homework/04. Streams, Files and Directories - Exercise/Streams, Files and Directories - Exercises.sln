@@ -15,9 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Directory Traversal", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demoForBadLookingCode", "demoForBadLookingCode\demoForBadLookingCode.csproj", "{53AD9B15-581E-42D0-A708-0297FEF4FA6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Copy Directory", "05. Copy Directory\05. Copy Directory.csproj", "{C88B6598-D1E4-4C4A-988D-864CF2680814}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. CopyDirectory", "05. CopyDirectory\05. CopyDirectory.csproj", "{1DA5DCC5-E21D-4CB9-922C-F525483F3261}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. CopyDirectory", "05. CopyDirectory\05. CopyDirectory.csproj", "{1DA5DCC5-E21D-4CB9-922C-F525483F3261}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +47,6 @@ Global
 		{53AD9B15-581E-42D0-A708-0297FEF4FA6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53AD9B15-581E-42D0-A708-0297FEF4FA6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53AD9B15-581E-42D0-A708-0297FEF4FA6E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C88B6598-D1E4-4C4A-988D-864CF2680814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C88B6598-D1E4-4C4A-988D-864CF2680814}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C88B6598-D1E4-4C4A-988D-864CF2680814}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C88B6598-D1E4-4C4A-988D-864CF2680814}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DA5DCC5-E21D-4CB9-922C-F525483F3261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1DA5DCC5-E21D-4CB9-922C-F525483F3261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA5DCC5-E21D-4CB9-922C-F525483F3261}.Release|Any CPU.ActiveCfg = Release|Any CPU
