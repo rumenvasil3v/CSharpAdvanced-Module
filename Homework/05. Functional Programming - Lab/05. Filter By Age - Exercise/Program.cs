@@ -1,4 +1,17 @@
-﻿using System.Threading.Channels;
+﻿/*
+5
+Lucas, 20
+Tomas, 18
+Mia, 29
+Noah, 31
+Simo, 16
+younger
+20
+city
+
+ */
+
+using System.Threading.Channels;
 
 namespace _05._Filter_By_Age___Exercise
 {
@@ -40,9 +53,13 @@ namespace _05._Filter_By_Age___Exercise
             {
                 return x => x.Age >= ageThreshold;
             }
-            else
+            else if (condition == "younger")
             {
                 return x => x.Age < ageThreshold;
+            }
+            else
+            {
+                return x => false;
             }
         }
 
@@ -56,9 +73,9 @@ namespace _05._Filter_By_Age___Exercise
                     return x => Console.WriteLine(x.Name);
                 case "age":
                     return x => Console.WriteLine(x.Age);
+                default:
+                    return x => new ArgumentException(format);
             }
-
-            return x => Console.WriteLine("Invalid input for {0}", x);
         }
 
         static void PrintFilteredPeople(List<Person> people, Func<Person, bool> filter, Action<Person> printer)
