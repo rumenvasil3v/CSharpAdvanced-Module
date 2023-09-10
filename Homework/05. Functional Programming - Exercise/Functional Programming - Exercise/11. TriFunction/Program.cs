@@ -1,4 +1,41 @@
-﻿using System.Linq;
+﻿//using System.Linq;
+
+//namespace _11._TriFunction
+//{
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            int bound = int.Parse(Console.ReadLine());
+
+//            var names = Console.ReadLine().Split(' ');
+
+//            foreach (string name in names)
+//            {
+//                bool isValid = MainFunction(name, x => x >= bound);
+//                if (isValid)
+//                {
+//                    Console.WriteLine(name);
+//                    break;
+//                }
+//            }
+//        }
+
+//        static bool MainFunction(string name, Func<int, bool> func)
+//        {
+//            int sum = 0;
+
+//            foreach (char character in name)
+//            {
+//                sum += character;
+//            }
+
+//            return func(sum);
+//        }
+//    }
+//}
+
+using System.Linq;
 
 namespace _11._TriFunction
 {
@@ -10,27 +47,20 @@ namespace _11._TriFunction
 
             var names = Console.ReadLine().Split(' ');
 
-            foreach (string name in names)
+            Func<string, bool> func = x =>
             {
-                bool isValid = MainFunction(name, x => x >= bound);
-                if (isValid)
+                int sum = 0;
+
+                foreach (var character in x)
                 {
-                    Console.WriteLine(name);
-                    break;
+                    sum += character;
                 }
-            }
-        }
 
-        static bool MainFunction(string name, Func<int, bool> func)
-        {
-            int sum = 0;
+                return sum >= bound;
+            };
 
-            foreach (char character in name)
-            {
-                sum += character;
-            }
-
-            return func(sum);
+            var firstName = names.FirstOrDefault(func);
+            Console.WriteLine(firstName);
         }
     }
 }
