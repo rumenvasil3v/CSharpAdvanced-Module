@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Action Print", "01. Action Print\01. Action Print.csproj", "{4FB07A0F-1BA8-4A4D-A38A-28DB469F0981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Action Print", "01. Action Print\01. Action Print.csproj", "{4FB07A0F-1BA8-4A4D-A38A-28DB469F0981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Knights of Honor", "02. Knights of Honor\02. Knights of Honor.csproj", "{1430044D-1349-4AF8-AC84-ABEA5B7EE0F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4FB07A0F-1BA8-4A4D-A38A-28DB469F0981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB07A0F-1BA8-4A4D-A38A-28DB469F0981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB07A0F-1BA8-4A4D-A38A-28DB469F0981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1430044D-1349-4AF8-AC84-ABEA5B7EE0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1430044D-1349-4AF8-AC84-ABEA5B7EE0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1430044D-1349-4AF8-AC84-ABEA5B7EE0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1430044D-1349-4AF8-AC84-ABEA5B7EE0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
