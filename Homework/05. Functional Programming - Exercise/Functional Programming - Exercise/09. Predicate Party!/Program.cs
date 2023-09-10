@@ -1,7 +1,7 @@
 ﻿/*
 Monica Ivelina MJ Rumen Peter
-Double StartsWith MJ
-Double EndsWith lina
+Double StartsWith Emo
+Double EndsWith Dudi
 Party!
 
  */
@@ -38,6 +38,14 @@ namespace _09._Predicate_Party_
                         people.RemoveAll(criteriaPredicate);
                         break;
                     case "Double":
+                        //List<string> filtered = people.Where(p => criteriaPredicate(p)).ToList();
+                        //foreach (var person in people)
+                        //{
+                        //    filtered.Add(person);
+                        //}
+
+                        //people = filtered;
+
                         var matches = people.FindAll(criteriaPredicate);
                         if (matches.Count > 0)
                         {
