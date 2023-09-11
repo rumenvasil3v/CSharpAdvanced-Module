@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace _04._Recursive_Factorial
 {
@@ -6,19 +7,20 @@ namespace _04._Recursive_Factorial
     {
         static void Main(string[] args)
         {
-            int number = int.Parse(Console.ReadLine());
+            BigInteger number = BigInteger.Parse(Console.ReadLine());
 
-            Console.WriteLine(FactorialOfNumber(number));
+            number = FactorialOfNumber(number);
+            Console.WriteLine(number);
         }
 
-        public static int FactorialOfNumber(int number)
+        public static BigInteger FactorialOfNumber(BigInteger number)
         {
-            if (number == 1)
+            if (number == 0)
             {
-                return number;
+                return 1;
             }
 
-            return number *= FactorialOfNumber(number - 1);
+            return number * FactorialOfNumber(number - 1);
         }
     }
 }
