@@ -3,29 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Car", "CarManufacturer\01. Car.csproj", "{DDC70425-B9C0-4DD4-8F92-88AA11C38818}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Car Extension", "02. Car Extension\02. Car Extension.csproj", "{A7698246-B31B-4B7B-A12B-363B0538DC1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Car Constructors", "03. Car Constructors\03. Car Constructors.csproj", "{8217BBB7-8331-4898-ADA6-995020099864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Car Constructors", "03. Car Constructors\03. Car Constructors.csproj", "{8217BBB7-8331-4898-ADA6-995020099864}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Car Engine And Tires", "04. Car Engine And Tires\04. Car Engine And Tires.csproj", "{DB3E6BBE-B8A9-442B-924C-CBEF3EAD5311}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Car Engine And Tires", "04. Car Engine And Tires\04. Car Engine And Tires.csproj", "{DB3E6BBE-B8A9-442B-924C-CBEF3EAD5311}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Special Cars", "05. Special Cars\05. Special Cars.csproj", "{32613C55-58D6-4EF5-875B-40810E856859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Special Cars", "05. Special Cars\05. Special Cars.csproj", "{32613C55-58D6-4EF5-875B-40810E856859}"
 EndProject
-=======
->>>>>>> 89367415b3a595e7280df04e819263c11f31e595
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Car", "01. Car\01. Car.csproj", "{A0D94A82-1E13-4DFC-BE2A-8A46DE0CC0F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DDC70425-B9C0-4DD4-8F92-88AA11C38818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDC70425-B9C0-4DD4-8F92-88AA11C38818}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDC70425-B9C0-4DD4-8F92-88AA11C38818}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDC70425-B9C0-4DD4-8F92-88AA11C38818}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7698246-B31B-4B7B-A12B-363B0538DC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7698246-B31B-4B7B-A12B-363B0538DC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7698246-B31B-4B7B-A12B-363B0538DC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,7 +27,6 @@ Global
 		{8217BBB7-8331-4898-ADA6-995020099864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8217BBB7-8331-4898-ADA6-995020099864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8217BBB7-8331-4898-ADA6-995020099864}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
 		{DB3E6BBE-B8A9-442B-924C-CBEF3EAD5311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB3E6BBE-B8A9-442B-924C-CBEF3EAD5311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB3E6BBE-B8A9-442B-924C-CBEF3EAD5311}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,8 +35,10 @@ Global
 		{32613C55-58D6-4EF5-875B-40810E856859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32613C55-58D6-4EF5-875B-40810E856859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32613C55-58D6-4EF5-875B-40810E856859}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
->>>>>>> 89367415b3a595e7280df04e819263c11f31e595
+		{A0D94A82-1E13-4DFC-BE2A-8A46DE0CC0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D94A82-1E13-4DFC-BE2A-8A46DE0CC0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D94A82-1E13-4DFC-BE2A-8A46DE0CC0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D94A82-1E13-4DFC-BE2A-8A46DE0CC0F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
