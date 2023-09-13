@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Recursive Array Sum", "01. Recursive Array Sum\01. Recursive Array Sum.csproj", "{8F00BA14-64C1-4BB4-B5E7-65E09C9F3C6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Recursive Array Sum", "01. Recursive Array Sum\01. Recursive Array Sum.csproj", "{8F00BA14-64C1-4BB4-B5E7-65E09C9F3C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Recursive Drawing", "02. Recursive Drawing\02. Recursive Drawing.csproj", "{288FA689-96CE-4ADF-A1A5-7F5A2AC72053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Recursive Drawing", "02. Recursive Drawing\02. Recursive Drawing.csproj", "{288FA689-96CE-4ADF-A1A5-7F5A2AC72053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Generating 0 Slash 1 Vectors", "03. Generating 0 Slash 1 Vectors\03. Generating 0 Slash 1 Vectors.csproj", "{82952868-303B-4A0B-A324-FBDFF444A157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Generating 0 Slash 1 Vectors", "03. Generating 0 Slash 1 Vectors\03. Generating 0 Slash 1 Vectors.csproj", "{82952868-303B-4A0B-A324-FBDFF444A157}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Recursive Factorial", "04. Recursive Factorial\04. Recursive Factorial.csproj", "{3D71B79F-6C39-40F7-8DB8-B1A372B46844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Recursive Factorial", "04. Recursive Factorial\04. Recursive Factorial.csproj", "{3D71B79F-6C39-40F7-8DB8-B1A372B46844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Paths in Labyrinth", "05. Paths in Labyrinth\05. Paths in Labyrinth.csproj", "{0A87C8D5-4058-4C05-A632-D1D4038BD16E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3D71B79F-6C39-40F7-8DB8-B1A372B46844}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D71B79F-6C39-40F7-8DB8-B1A372B46844}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D71B79F-6C39-40F7-8DB8-B1A372B46844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A87C8D5-4058-4C05-A632-D1D4038BD16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A87C8D5-4058-4C05-A632-D1D4038BD16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A87C8D5-4058-4C05-A632-D1D4038BD16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A87C8D5-4058-4C05-A632-D1D4038BD16E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
