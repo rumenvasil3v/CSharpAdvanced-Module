@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Opinion Poll", "04. Opi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Date Modifier", "05. Date Modifier\05. Date Modifier.csproj", "{3326B169-36A1-4000-84A8-A082E4FBCBDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Speed Racing", "06. Speed Racing\06. Speed Racing.csproj", "{7EAA55A6-1D60-49D4-B18C-6EAAF1C4D824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Speed Racing", "06. Speed Racing\06. Speed Racing.csproj", "{7EAA55A6-1D60-49D4-B18C-6EAAF1C4D824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Raw Data", "07. Raw Data\07. Raw Data.csproj", "{D3BDA8E9-8194-41E3-B7BE-68A3421DC0B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Raw Data", "07. Raw Data\07. Raw Data.csproj", "{D3BDA8E9-8194-41E3-B7BE-68A3421DC0B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Car Salesman", "08. Car Salesman\08. Car Salesman.csproj", "{ECA791D7-22DC-4208-9587-CA69DC9D8C67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D3BDA8E9-8194-41E3-B7BE-68A3421DC0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3BDA8E9-8194-41E3-B7BE-68A3421DC0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3BDA8E9-8194-41E3-B7BE-68A3421DC0B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECA791D7-22DC-4208-9587-CA69DC9D8C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECA791D7-22DC-4208-9587-CA69DC9D8C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECA791D7-22DC-4208-9587-CA69DC9D8C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECA791D7-22DC-4208-9587-CA69DC9D8C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
