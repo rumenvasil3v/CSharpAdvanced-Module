@@ -4,33 +4,33 @@
     {
         static void Main(string[] args)
         {
-            CustomList list = new CustomList();
+            //CustomList list = new CustomList();
 
-            list.Add(2);
-            list.Add(3);
-            list.Add(4); // resize here
-            list.Add(5);
+            //list.Add(2);
+            //list.Add(3);
+            //list.Add(4); // resize here
+            //list.Add(5);
 
-            list.Add(6); // resize here
-            list.Add(7);
-            list.Add(8);
-            list.Add(9);
+            //list.Add(6); // resize here
+            //list.Add(7);
+            //list.Add(8);
+            //list.Add(9);
 
-            list.Insert(2, 100);
-            Console.WriteLine(string.Join(", ", list.Items));
+            //list.Insert(2, 100);
+            //Console.WriteLine(string.Join(", ", list.Items));
 
-            //list.Swap(8, 9);
-            Console.WriteLine(string.Join(", ", list.Items));
+            ////list.Swap(8, 9);
+            //Console.WriteLine(string.Join(", ", list.Items));
 
-            list.RemoveAt(9);
+            //list.RemoveAt(9);
             
-            Console.WriteLine(string.Join(", ", list.Items));
+            //Console.WriteLine(string.Join(", ", list.Items));
 
-            Console.WriteLine(list[7]);
+            //Console.WriteLine(list[7]);
 
-            list[7] = 200;
+            //list[7] = 200;
             
-            Console.WriteLine(list[7]);
+            //Console.WriteLine(list[7]);
 
             //list.RemoveAt(7);
             //list.RemoveAt(6);
@@ -69,7 +69,40 @@
             //normalList[1] = 10;
             //Console.WriteLine(string.Join(",", normalList));
 
-            
+            //CustomStack stack = new CustomStack();
+
+            //stack.Push(3); // add element 
+            //stack.Push(4); // add element 
+            //stack.Push(5); // add element 
+            //stack.ForEach(x => Console.Write(x + ", "));
+
+            //Console.WriteLine(stack.Pop()); // remove element from the stack
+            //Console.WriteLine(stack.Peek()); // 4
+            //Console.WriteLine(stack.Peek()); // 4
+
+            //stack.Pop(); // remove element from the stack
+            //Console.WriteLine(stack.Peek()); // 3
+            //Console.WriteLine(stack.Peek()); // 3
+            //Console.WriteLine(stack.Pop()); // throw exception
+
+            CustomQueue queue = new CustomQueue();
+
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+
+            Console.WriteLine(queue.Peek());
+            Console.WriteLine(queue.Peek());
+            Console.WriteLine(queue.Peek());
+
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Peek());
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Peek()); // check the first element 
+            Console.WriteLine(queue.Dequeue()); // remove element
+
+
+            queue.ForEach(x => Console.Write(x + ", "));
         }
     }
 }

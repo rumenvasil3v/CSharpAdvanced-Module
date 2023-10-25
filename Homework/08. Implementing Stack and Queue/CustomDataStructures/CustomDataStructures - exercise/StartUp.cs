@@ -1,25 +1,9 @@
-﻿namespace CustomDataStructures
+﻿namespace CustomDataStructures_exercise
 {
     public class StartUp
     {
         static void Main(string[] args)
         {
-            CustomList list = new CustomList();
-
-            list.Add(2);
-            list.Add(3);
-            list.Add(4); // resize here
-            list.Add(5);
-
-            list.Add(6); // resize here
-            list.Add(7);
-            list.Add(8);
-            list.Add(9);
-
-            //list.Insert(2, 100);
-
-            list.RemoveAt(8);
-
             //list.RemoveAt(7);
             //list.RemoveAt(6);
             //list.RemoveAt(5);
@@ -56,6 +40,60 @@
 
             //normalList[1] = 10;
             //Console.WriteLine(string.Join(",", normalList));
+
+            //Queue<int> queue = new Queue<int>();
+
+            //queue.Enqueue(3);
+
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+
+            //queue.Clear();
+
+            //CustomStack stack = new CustomStack();
+            //stack.Push(1);
+            //stack.Push(2);
+
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+
+            //stack.Push(3);
+            //stack.Push(123);
+            //stack.Push(12325235);
+            //stack.Push(545);
+
+            //stack.ForEach(x => Console.Write(x + 1 + ", "));
+
+            //Console.WriteLine();
+
+            //Console.WriteLine(stack.Peek());
+            //Console.WriteLine(stack.Peek());
+            //Console.WriteLine(stack.Peek());
+
+            CustomQueue queue = new CustomQueue();
+
+            queue.Enqueue(123);
+            queue.Enqueue(321);
+            queue.Enqueue(432);
+
+            queue.ForEach(x => Console.WriteLine($"-- {x + 1}"));
+
+            //Console.WriteLine();
+
+            //Console.WriteLine(queue.Peek());
+
+            //queue.Dequeue();
+
+            //Console.WriteLine();
+            //Console.WriteLine(queue.Peek());
+            //Console.WriteLine();
+
+            //queue.Dequeue();
+
+            //Console.WriteLine(queue.Peek());
+            queue.Clear();
+
+            queue.ForEach(x => Console.WriteLine($"-- {x + 1}"));
         }
     }
 }
