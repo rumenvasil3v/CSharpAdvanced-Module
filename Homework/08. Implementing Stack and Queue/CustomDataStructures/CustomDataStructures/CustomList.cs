@@ -73,6 +73,7 @@ namespace CustomDataStructures
 
             this.items[index + 1] = currentElement;
 
+            this.indexer++;
             this.Count++;
         }
 
@@ -139,9 +140,9 @@ namespace CustomDataStructures
 
         public void ForEach(Action<int> action)
         {
-            foreach (var element in this.items)
+            for (int n = 0; n < this.Count; n++)
             {
-                action(element);
+                action(this.items[n]);
             }
         }
 

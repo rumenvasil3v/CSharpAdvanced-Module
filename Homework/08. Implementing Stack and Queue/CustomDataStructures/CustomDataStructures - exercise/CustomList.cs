@@ -18,7 +18,19 @@ namespace CustomDataStructures_exercise
             this.items = new int[Capacity];
         }
 
-        public int[] Items { get { return this.items; } }
+        public int[] Items 
+        { 
+            get
+            {
+                int[] tempArray = new int[this.Count];
+                for (int n = 0; n < this.Count; n++)
+                {
+                    tempArray[n] = this.items[n];
+                }
+
+                return tempArray;
+            } 
+        }
 
         public int this[int index] //or public T this[int index]
         {
@@ -70,6 +82,7 @@ namespace CustomDataStructures_exercise
             this.ShiftToRight(index);
             this.items[index] = element;
             this.Count++;
+            this.indexer++;
         }
 
         public int RemoveAt(int index)
@@ -83,6 +96,7 @@ namespace CustomDataStructures_exercise
             this.items[index] = default;
             this.Shift(index);
 
+            this.indexer--;
             this.Count--;
             if (this.Count <= this.items.Length / 4)
             {
@@ -122,9 +136,9 @@ namespace CustomDataStructures_exercise
 
         public void ForEach(Action<int> action)
         {
-            foreach (var element in this.items)
+            for (int n = 0; n < this.Count; n++)
             {
-                action(element);
+                action(this.items[n]);
             }
         }
 
@@ -144,7 +158,7 @@ namespace CustomDataStructures_exercise
             this.items = shrinkedArray;
         }
 
-        public void Shift(int index)
+        private void Shift(int index)
         {
             for (int n = index; n < this.Count - 1; n++)
             {
@@ -152,7 +166,8 @@ namespace CustomDataStructures_exercise
             }
         }
 
-        public void ShiftToRight(int index)
+        private void ShiftToRight(int index)
+
         {
             for (int n = this.Count; n > index; n--)
             {

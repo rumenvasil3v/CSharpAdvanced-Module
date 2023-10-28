@@ -4,96 +4,93 @@
     {
         static void Main(string[] args)
         {
-            //list.RemoveAt(7);
-            //list.RemoveAt(6);
-            //list.RemoveAt(5);
-            //list.RemoveAt(4);
-            //list.RemoveAt(3);
-            //list.RemoveAt(2);
-
-            //list[2] = 3;
-            //Console.WriteLine(list[2]);
-
-            //check if an element exists
-            //Console.WriteLine(list.Contains(8));
-            //Console.WriteLine(list.Contains(11));
-
-            //before swap
-            //Console.WriteLine(list[1]);
-            //Console.WriteLine(list[2]);
-
-            //swap elements
-            //list.Swap(1, 2);
-
-            //after swap
-            //Console.WriteLine(list[1]);
-            //Console.WriteLine(list[2]);
-            //Console.WriteLine(list[11]);
-
-            //Console.WriteLine(string.Join(", ", list.Items));
-
-            //Console.WriteLine();
-
-            //list.ForEach(x => Console.WriteLine($"--{x}")); // prints elements depending on the action 
-
-            //List<int> normalList = new List<int>() { 2, 3, 4 };
-
-            //normalList[1] = 10;
-            //Console.WriteLine(string.Join(",", normalList));
-
-            //Queue<int> queue = new Queue<int>();
-
-            //queue.Enqueue(3);
-
-            //queue.Enqueue(4);
-            //queue.Enqueue(5);
-
-            //queue.Clear();
-
-            //CustomStack stack = new CustomStack();
-            //stack.Push(1);
-            //stack.Push(2);
-
-            //Console.WriteLine(stack.Pop());
-            //Console.WriteLine(stack.Pop());
-
-            //stack.Push(3);
-            //stack.Push(123);
-            //stack.Push(12325235);
-            //stack.Push(545);
-
-            //stack.ForEach(x => Console.Write(x + 1 + ", "));
-
-            //Console.WriteLine();
-
-            //Console.WriteLine(stack.Peek());
-            //Console.WriteLine(stack.Peek());
-            //Console.WriteLine(stack.Peek());
-
+//Queue
             CustomQueue queue = new CustomQueue();
+            Console.WriteLine("This is Queue:");
 
             queue.Enqueue(123);
             queue.Enqueue(321);
             queue.Enqueue(432);
 
+            queue.Dequeue();
+
+            Console.WriteLine(queue.Peek());
+
             queue.ForEach(x => Console.WriteLine($"-- {x + 1}"));
 
-            //Console.WriteLine();
+            queue.Enqueue(12019423);
+            queue.Enqueue(123409);
+            queue.Enqueue(14981423);
 
-            //Console.WriteLine(queue.Peek());
+            queue.Dequeue();
+            queue.Dequeue();
 
-            //queue.Dequeue();
+            Console.WriteLine(queue.Peek());
+            queue.ForEach(x => Console.WriteLine($"-- {x + 1}"));
 
-            //Console.WriteLine();
-            //Console.WriteLine(queue.Peek());
-            //Console.WriteLine();
-
-            //queue.Dequeue();
-
-            //Console.WriteLine(queue.Peek());
+            queue.Clear();
+            queue.ForEach(x => Console.WriteLine($"-- {x + 1}"));
             queue.Clear();
 
             queue.ForEach(x => Console.WriteLine($"-- {x + 1}"));
+
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("This is List:");
+
+//List
+            CustomList list = new CustomList();
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            list.Add(5);
+            list.Add(6);
+            Console.WriteLine(string.Join(" ", list.Items));
+
+            list.RemoveAt(0);
+            list.RemoveAt(3);  
+            list.Add(100);
+            list.Add(200);
+
+            list.Insert(2, 235);
+            list.Add(17);
+            list.RemoveAt(0);
+            list.RemoveAt(0);
+            list.RemoveAt(0);
+            list.RemoveAt(0);
+            list.RemoveAt(0);
+
+            list.Add(13);
+            list.Add(18);
+
+            list.ForEach(Console.WriteLine);
+
+            Console.WriteLine(string.Join(" ", list.Items));
+
+            Console.WriteLine(list.Contains(12));
+            Console.WriteLine(list.Contains(13));
+
+            list.Swap(2, 3);
+
+            list.ForEach(Console.WriteLine);
+            Console.WriteLine(string.Join(" ", list.Items));
+
+//Stack
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("This is Stack:");
+            CustomStack stack = new CustomStack();
+            stack.Push(321);
+            stack.Push(858);
+            stack.Push(134);
+
+            Console.WriteLine(stack.Peek());
+
+            stack.ForEach(x => Console.WriteLine($"-- {x + 1}"));
+
+            Console.WriteLine(stack.Pop());
+
+            stack.ForEach(x => Console.WriteLine($"-- {x + 1}"));
+
+            Console.WriteLine(stack.Peek());
         }
     }
 }
