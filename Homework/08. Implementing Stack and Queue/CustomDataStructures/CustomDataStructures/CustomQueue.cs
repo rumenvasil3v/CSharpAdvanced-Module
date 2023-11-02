@@ -17,8 +17,7 @@ namespace CustomDataStructures
         {
             if (headElements == null)
             {
-                headElements = new QueueElement(element);
-                tailElements = new QueueElement(element);
+                headElements = tailElements = new QueueElement(element);
             }
             else if (headElements != null)
             {
