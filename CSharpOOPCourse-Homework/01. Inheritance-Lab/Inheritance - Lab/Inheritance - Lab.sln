@@ -4,14 +4,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SingleInheritance", "01. Single Inheritance\01.SingleInheritance.csproj", "{28C3093F-5360-4254-AAB6-54A359BECF3A}"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d644365c9c4e01e00573237cfc30f468dbe88a58
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MultipleInheritance", "02.MultipleInheritance\02.MultipleInheritance.csproj", "{639EF2F1-5580-455A-A8FD-D0DEA097FD32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HierarchicalInheritance", "03.HierarchicalInheritance\03.HierarchicalInheritance.csproj", "{2C6C2B60-4763-4537-B8F6-299ED5C2E104}"
+<<<<<<< HEAD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.RandomList", "04.RandomList\04.RandomList.csproj", "{4B29A212-30E1-4281-9679-555B7C9A1A7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.StackOfStrings", "05.StackOfStrings\05.StackOfStrings.csproj", "{E26C4DEC-6BC5-4708-8C84-6551F1338A48}"
+=======
+=======
+>>>>>>> 8a951fe554e1586f9ecdf0b810e0b8f128c5a0b8
+>>>>>>> d644365c9c4e01e00573237cfc30f468dbe88a58
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
