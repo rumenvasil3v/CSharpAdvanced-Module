@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Farm
+{
+    public class StartUp
+    {
+        
+        static void Main(string[] args)
+        {
+            Dog dog = new Dog();
+
+            dog.Bark();
+            dog.Eat();
+        }
+    }
+}
