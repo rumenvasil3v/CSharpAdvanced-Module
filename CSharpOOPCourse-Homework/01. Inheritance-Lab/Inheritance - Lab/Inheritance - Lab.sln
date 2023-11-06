@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SingleInheritance", "01. Single Inheritance\01.SingleInheritance.csproj", "{28C3093F-5360-4254-AAB6-54A359BECF3A}"
+<<<<<<< HEAD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MultipleInheritance", "02.MultipleInheritance\02.MultipleInheritance.csproj", "{639EF2F1-5580-455A-A8FD-D0DEA097FD32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HierarchicalInheritance", "03.HierarchicalInheritance\03.HierarchicalInheritance.csproj", "{2C6C2B60-4763-4537-B8F6-299ED5C2E104}"
+=======
+>>>>>>> 8a951fe554e1586f9ecdf0b810e0b8f128c5a0b8
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
