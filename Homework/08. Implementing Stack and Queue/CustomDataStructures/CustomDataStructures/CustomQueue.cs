@@ -21,12 +21,10 @@ namespace CustomDataStructures
             }
             else if (headElements != null)
             {
-                var newElement = new QueueElement(element);
-                newElement.PreviousElements = tailElements;
-                tailElements.NextElements = newElement;
-                tailElements = newElement;
-
-                headElements.NextElements = tailElements.PreviousElements;
+                var current = new QueueElement(element);
+                current.PreviousElements = headElements;
+                headElements.NextElements = current;
+                headElements = current;
             }
 
             this.Count++;
@@ -39,15 +37,15 @@ namespace CustomDataStructures
                 throw new InvalidOperationException("Queue is empty!");
             }
 
-            int element = headElements.Value;
-            headElements = headElements.NextElements;
-            if (headElements == null)
+            int element = tailElements.Value;
+            tailElements = tailElements.NextElements;
+            if (tailElements == null)
             {
-                tailElements = null;
+                headElements = null;
             }
             else
             {
-                headElements.PreviousElements = null;
+                tailElements.PreviousElements = null;
             }
 
             this.Count--;
@@ -61,7 +59,7 @@ namespace CustomDataStructures
                 throw new InvalidOperationException("Queue is empty!");
             }
 
-            int element = headElements.Value;
+            int element = tailElements.Value;
 
             return element;
         }
@@ -74,7 +72,7 @@ namespace CustomDataStructures
 
         public void ForEach(Action<int> action)
         {
-            var current = headElements;
+            var current = tailElements;
             while (current != null)
             {
                 action(current.Value);

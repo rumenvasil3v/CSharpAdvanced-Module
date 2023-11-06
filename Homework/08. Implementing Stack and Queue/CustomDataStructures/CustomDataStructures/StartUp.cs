@@ -95,6 +95,7 @@
             Console.WriteLine(queue.Peek());
             Console.WriteLine(queue.Peek());
 
+            queue.ForEach(x => Console.Write(x + " "));
             Console.WriteLine(queue.Dequeue());
             Console.WriteLine(queue.Peek());
             Console.WriteLine(queue.Dequeue());
@@ -102,7 +103,7 @@
             Console.WriteLine(queue.Dequeue()); // remove element
 
 
-            queue.ForEach(x => Console.Write(x + ", "));
+            queue.ForEach(x => Console.Write(x + ", ")); 
         }
     }
 }
